@@ -6,8 +6,10 @@ import Footer from './components/footer.vue'
 
 <template>
   <Navegacio />
-
-  <RouterView />
-
+  <RouterView v-slot="{ Component }">
+    <Transition name="view" mode="out-in">
+      <component :is="Component" />
+    </Transition>
+  </RouterView>
   <Footer />
 </template>
