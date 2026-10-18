@@ -175,4 +175,4 @@ L'aplicació implementa els tres estats sol·licitats:
 
 **Júlia Martínez García**
 
-Projecte desenvolupat per a l'assignatura de Desenvolupament Web.
+Projecte desenvolupat per a l'assignatura de Web Dinàmica.
