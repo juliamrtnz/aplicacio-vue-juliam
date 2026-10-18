@@ -85,12 +85,14 @@ onMounted(loadAnimals)
     </section>
 
     <section v-else class="animal-grid" aria-label="Perfils d'animals">
-      <Animal
-        v-for="animal in filteredAnimals"
-        :key="animal.id"
-        :nom="animal.nom"
-        :especie="animal.especie"
-      />
+    
+  <Animal
+  v-for="animal in filteredAnimals"
+  :key="animal.id"
+  :nom="animal.nom"
+  :especie="animal.especie"
+  :emoji="animal.emoji"
+/>
     </section>
   </main>
 </template>

@@ -1,70 +1,82 @@
-# LinkedIn per Animalets
+# 🐾 LinkedIn per Animalets
 
-## Temàtica i descripció
+> Una xarxa social professional pensada exclusivament per a mascotes i animals amb talent.
 
-LinkedIn per Animalets és una aplicació desenvolupada amb Vue.js que simula una xarxa de perfils per a animals. L'aplicació permet consultar informació dels diferents animals emmagatzemats a Firebase Firestore i navegar per diverses seccions de la web.
+---
 
-## Tecnologies utilitzades
+## 🌟 Temàtica i descripció
 
-- Vue 3
-- Vue Router
-- Firebase
-- Firestore
-- Firebase Hosting
+**LinkedIn per Animalets** és una aplicació desenvolupada amb **Vue 3** que simula una xarxa de perfils professionals per a animals.
 
-## Instal·lació de dependències
+Els usuaris poden navegar per diferents seccions de la web i consultar perfils d'animals emmagatzemats a **Firebase Firestore**, mostrats dinàmicament dins de l'aplicació.
+
+---
+
+## 🛠️ Tecnologies utilitzades
+
+- 💚 Vue 3
+- 🧭 Vue Router
+- 🔥 Firebase
+- 📂 Firestore Database
+- ☁️ Firebase Hosting
+
+---
+
+## 🚀 Instal·lació i execució
+
+### Instal·lar les dependències
 
 ```bash
 npm install
 ```
 
-## Execució local
+### Executar el projecte en local
 
 ```bash
-npm run dev
+http-server
 ```
 
-## Generació de la versió de producció
+### Generar la versió de producció
 
 ```bash
 npm run build
 ```
 
-## Desplegament a Firebase
+### Desplegar a Firebase Hosting
 
 ```bash
 firebase deploy
 ```
 
-## Components propis
+---
 
-### navegacio.vue
+## 🧩 Components propis
 
-Component encarregat de mostrar el menú principal de navegació i els enllaços entre les diferents rutes.
+### 🧭 navegacio.vue
 
-### animal.vue
+Menú principal de navegació entre les diferents rutes de l'aplicació.
 
-Component encarregat de mostrar les dades d'un animal.
+### 🐾 animal.vue
 
-### footer.vue
+Mostra la informació individual de cada animal recuperada des de Firestore.
 
-Component que mostra el peu de pàgina de l'aplicació.
+### 📞 contacteInfo.vue
 
-### contacteInfo.vue
+Mostra les dades de contacte.
 
-Component que mostra la informació de contacte.
+### 🦴 footer.vue
 
-## Exemple de comunicació amb props
+Mostra el peu de pàgina de l'aplicació.
 
-### Comunicació 1
+---
 
-Component pare:
+## 🔄 Comunicació entre components (Props)
 
-`AnimalsView.vue`
+### Exemple 1
 
-Component fill:
+✅ **Component pare:** `AnimalsView.vue`
 
-`animal.vue`
+✅ **Component fill:** `animal.vue`
 
 Dades enviades:
 
@@ -72,56 +84,48 @@ Dades enviades:
 <Animal
   :nom="animal.nom"
   :especie="animal.especie"
+  :emoji="animal.emoji"
 />
 ```
 
-Props rebudes al component fill:
+Props rebudes:
 
 ```vue
 defineProps({
   nom: String,
-  especie: String
+  especie: String,
+  emoji: String
 })
 ```
 
-### Comunicació 2
+---
 
-Component pare:
+### Exemple 2
 
-`ContacteView.vue`
+✅ **Component pare:** `ContacteView.vue`
 
-Component fill:
-
-`contacteInfo.vue`
+✅ **Component fill:** `contacteInfo.vue`
 
 Dades enviades:
 
 - email
 - telefon
 
-## Rutes de l'aplicació
+---
 
-### /
+## 🗺️ Rutes de l'aplicació
 
-Pàgina principal de benvinguda de LinkedIn per Animalets.
+| Ruta | Contingut |
+|--------|--------|
+| `/` | Pàgina principal de benvinguda |
+| `/animals` | Mostra els perfils d'animals |
+| `/memes` | Secció de memes d'animals |
+| `/contacte` | Informació de contacte |
+| `/about` | Informació sobre el projecte |
 
-### /animals
+---
 
-Mostra els animals emmagatzemats a Firestore.
-
-### /memes
-
-Mostra una secció amb memes relacionats amb animals.
-
-### /contacte
-
-Mostra la informació de contacte.
-
-### /about
-
-Mostra informació general sobre el projecte.
-
-## Firestore
+## 🔥 Firestore
 
 ### Col·lecció utilitzada
 
@@ -134,6 +138,7 @@ animals
 ```text
 nom
 especie
+emoji
 ```
 
 ### Vista que mostra les dades
@@ -142,22 +147,32 @@ especie
 AnimalsView.vue
 ```
 
-Les dades es recuperen de Firestore i es mostren mitjançant el component `animal.vue` utilitzant props.
+Les dades es recuperen des de Firestore i es mostren utilitzant el component `animal.vue` mitjançant props.
 
-## Gestió d'estats
+---
 
-L'aplicació incorpora:
+## ⚡ Gestió d'estats
 
-- Missatge de càrrega de dades.
-- Missatge d'error en cas de problemes de connexió.
-- Missatge quan no hi ha dades disponibles.
+L'aplicació implementa els tres estats sol·licitats:
 
-## Enllaç a la web publicada
+✅ Estat de càrrega
 
-URL de Firebase Hosting:
+✅ Missatge d'error de lectura
 
-PASTA AQUÍ LA URL DE LINKEDIN PER ANIMALETS
+✅ Missatge quan no existeixen dades disponibles
 
-## Autor
+---
 
-Júlia Martínez García
+## 🌍 Web publicada
+
+### Firebase Hosting
+
+ https://linkedin-per-animalets.web.app
+
+---
+
+## 👩‍💻 Autor
+
+**Júlia Martínez García**
+
+Projecte desenvolupat per a l'assignatura de Desenvolupament Web.
